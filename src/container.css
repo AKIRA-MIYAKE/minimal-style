@@ -1,0 +1,42 @@
+/* Container */
+
+/*---
+title: Container
+---
+Container that changing the grid at different screen widths.
+Using break point that defined on [basscss-grid](https://github.com/basscss/basscss/tree/master/modules/grid).
+```example:html
+<div class="container">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+```
+*/
+
+.container {
+  @extend .clearfix;
+
+  display: block;
+  box-sizing: border-box;
+  overflow-x: scroll;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (--breakpoint-sm) {
+  .container {
+    width: var(--container-width-sm);
+  }
+}
+
+@media (--breakpoint-md) {
+  .container {
+    width: var(--container-width-md);
+  }
+}
+
+@media (--breakpoint-lg) {
+  .container {
+    width: var(--container-width-lg);
+  }
+}

@@ -1,0 +1,476 @@
+/* Buttons */
+
+/*---
+title: Basic Buttons
+section: Buttons
+---
+```example:html
+<button class="btn">Default</button>
+<hr class="my1" />
+<a href="#" class="btn">Link Button</a>
+<hr class="my1" />
+<button class="btn btn--primary">Primary</button>
+<button class="btn btn--secondary">Secondary</button>
+<button class="btn btn--success">Success</button>
+<button class="btn btn--info">Info</button>
+<button class="btn btn--warning">Warning</button>
+<button class="btn btn--danger">Danger</button>
+```
+*/
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-appearance: none;
+
+  display: inline-block;
+  box-sizing: border-box;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-md);
+  text-align: center;
+  padding: calc(var(--default-space) * 0.625 * 0.3) var(--default-space);
+  transition: background var(--transition-time), color var(--transition-time), border-color var(--transition-time);
+
+  background: var(--color-gray-light);
+  color: var(--color-black);
+  border-color: color(var(--color-gray-light) shade(var(--shade-percentage)));
+
+  &:hover, &:focus {
+    background: color(var(--color-gray-light) tint(var(--tint-percentage)));
+    color: var(--color-black);
+    border-color: color(var(--color-gray-light) shade(var(--shade-percentage)));
+  }
+  &:active, &.active {
+    background: color(var(--color-gray-light) shade(var(--shade-percentage)));
+    color: var(--color-black);
+    border-color: color(var(--color-gray-light) shade(var(--shade-percentage)));
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-gray-light);
+    color: var(--color-black);
+    border-color: color(var(--color-gray-light) shade(var(--shade-percentage)));
+  }
+}
+
+.btn.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: transparent;
+
+  &:hover, &:focus {
+    background: color(var(--color-primary) tint(var(--tint-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:active, &.active {
+    background: color(var(--color-primary) shade(var(--shade-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+}
+
+.btn.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-color: transparent;
+
+  &:hover, &:focus {
+    background: color(var(--color-secondary) tint(var(--tint-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:active, &.active {
+    background: color(var(--color-secondary) shade(var(--shade-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+}
+
+.btn.btn--success {
+  background: var(--color-success);
+  color: var(--color-white);
+  border-color: transparent;
+
+  &:hover, &:focus {
+    background: color(var(--color-success) tint(var(--tint-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:active, &.active {
+    background: color(var(--color-success) shade(var(--shade-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-success);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+}
+
+.btn.btn--info {
+  background: var(--color-info);
+  color: var(--color-white);
+  border-color: transparent;
+
+  &:hover, &:focus {
+    background: color(var(--color-info) tint(var(--tint-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:active, &.active {
+    background: color(var(--color-info) shade(var(--shade-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-info);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+}
+
+.btn.btn--warning {
+  background: var(--color-warning);
+  color: var(--color-white);
+  border-color: transparent;
+
+  &:hover, &:focus {
+    background: color(var(--color-warning) tint(var(--tint-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:active, &.active {
+    background: color(var(--color-warning) shade(var(--shade-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-warning);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+}
+
+.btn.btn--danger {
+  background: var(--color-danger);
+  color: var(--color-white);
+  border-color: transparent;
+
+  &:hover, &:focus {
+    background: color(var(--color-danger) tint(var(--tint-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:active, &.active {
+    background: color(var(--color-danger) shade(var(--shade-percentage)));
+    color: var(--color-white);
+    border-color: transparent;
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: var(--color-danger);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+}
+
+
+/*---
+title: Ghost Buttons
+section: Buttons
+---
+```example:html
+<button class="btn btn-ghost">Default</button>
+<hr class="my1" />
+<a href="#" class="btn btn-ghost">Link Button</a>
+<hr class="my1" />
+<button class="btn btn--ghost btn--primary">Primary</button>
+<button class="btn btn--ghost btn--secondary">Secondary</button>
+<button class="btn btn--ghost btn--success">Success</button>
+<button class="btn btn--ghost btn--info">Info</button>
+<button class="btn btn--ghost btn--warning">Warning</button>
+<button class="btn btn--ghost btn--danger">Danger</button>
+```
+*/
+
+.btn.btn--ghost {
+  background: transparent;
+  color: var(--color-gray-dark);
+  border-color: var(--color-gray-dark);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-gray-dark) tint(var(--tint-percentage)));
+    border-color: color(var(--color-gray-dark) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-gray-dark);
+    color: var(--color-white);
+    border-color: var(--color-gray-dark);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-gray-dark);
+    border-color: var(--color-gray-dark);
+  }
+}
+
+.btn.btn--ghost.btn--primary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-primary) tint(var(--tint-percentage)));
+    border-color: color(var(--color-primary) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+.btn.btn--ghost.btn--secondary {
+  background: transparent;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-secondary) tint(var(--tint-percentage)));
+    border-color: color(var(--color-secondary) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border-color: var(--color-secondary);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+  }
+}
+
+.btn.btn--ghost.btn--success {
+  background: transparent;
+  color: var(--color-success);
+  border-color: var(--color-success);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-success) tint(var(--tint-percentage)));
+    border-color: color(var(--color-success) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-success);
+    color: var(--color-white);
+    border-color: var(--color-success);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-success);
+    border-color: var(--color-success);
+  }
+}
+
+.btn.btn--ghost.btn--info {
+  background: transparent;
+  color: var(--color-info);
+  border-color: var(--color-info);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-info) tint(var(--tint-percentage)));
+    border-color: color(var(--color-info) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-info);
+    color: var(--color-white);
+    border-color: var(--color-info);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-info);
+    border-color: var(--color-info);
+  }
+}
+
+.btn.btn--ghost.btn--warning {
+  background: transparent;
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-warning) tint(var(--tint-percentage)));
+    border-color: color(var(--color-warning) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-warning);
+    color: var(--color-white);
+    border-color: var(--color-warning);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-warning);
+    border-color: var(--color-warning);
+  }
+}
+
+.btn.btn--ghost.btn--danger {
+  background: transparent;
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+
+  &:hover, &:focus {
+    background: transparent;
+    color: color(var(--color-danger) tint(var(--tint-percentage)));
+    border-color: color(var(--color-danger) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    background: var(--color-danger);
+    color: var(--color-white);
+    border-color: var(--color-danger);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    opacity: var(--default-opacity);
+
+    background: transparent;
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+  }
+}
+
+
+/*---
+title: Button State
+section: Buttons
+---
+```example:html
+<button class="btn btn--primary active">.active</button>
+<button class="btn btn--ghost btn--secondary active">active</button>
+<hr class="my1" />
+<button class="btn btn--primary disabled">.disabled</button>
+<button class="btn btn--secondary" disabled=true>disabled=true</button>
+<button class="btn btn--ghost btn--success disabled">.disabled</button>
+<button class="btn btn--ghost btn--info" disabled=true>disabled=true</button>
+```
+*/
+
+
+/*---
+title: Button Sizing
+section: Buttons
+---
+```example:html
+<button class="btn btn--xs">Extra Small</button>
+<button class="btn btn--sm">Small</button>
+<button class="btn btn--md">Medium</button>
+<button class="btn btn--lg">Large</button>
+<button class="btn btn--xl">Extra Large</button>
+```
+*/
+
+.btn.btn--xs {
+  font-size: var(--font-size-xs);
+  padding: calc(var(--default-space) * 0.625 * 0.2) calc(var(--default-space) * 0.5);
+}
+
+.btn.btn--sm {
+  font-size: var(--font-size-sm);
+  padding: calc(var(--default-space) * 0.625 * 0.25) calc(var(--default-space) * 0.75);
+}
+
+.btn.btn--md {
+  font-size: var(--font-size-md);
+  padding: calc(var(--default-space) * 0.625 * 0.3) var(--default-space);
+}
+
+.btn.btn--lg {
+  font-size: var(--font-size-lg);
+  padding: calc(var(--default-space) * 0.625 * 0.4) calc(var(--default-space) * 1.25);
+}
+
+.btn.btn--xl {
+  font-size: var(--font-size-xl);
+  padding: calc(var(--default-space) * 0.625 * 0.5) calc(var(--default-space) * 1.5);
+}
+
+
+/*---
+title: Block Button
+section: Buttons
+---
+```example:html
+<button class="btn btn--primary btn--block mb1">Plane</button>
+<button class="btn btn--ghost btn--primary btn--block">Ghost</button>
+```
+*/
+
+.btn.btn--block {
+  display: block;
+  width: 100%;
+}

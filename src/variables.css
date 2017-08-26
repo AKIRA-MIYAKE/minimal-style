@@ -1,0 +1,68 @@
+/* Variables */
+
+/* Base colors */
+:root {
+  --color-white: #fff;
+  --color-gray-lighter: #f4f4f4;
+  --color-gray-light: #ececec;
+  --color-gray: #ccc;
+  --color-gray-dark: #777;
+  --color-gray-darker: #444;
+  --color-black: #222;
+  --color-true-black: #000;
+  --color-red: #db2828;
+  --color-orange: #f2711c;
+  --color-yellow: #fbbd08;
+  --color-olive: #b5cc18;
+  --color-green: #21ba45;
+  --color-teal: #00b5ad;
+  --color-blue: #2185d0;
+  --color-violet: #6435c9;
+  --color-purple: #a333c8;
+  --color-pink: #e03997;
+  --color-brown: #a5673f;
+}
+
+/* Brand colors */
+:root {
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-gray-dark);
+  --color-success: var(--color-teal);
+  --color-info: var(--color-violet);
+  --color-warning: var(--color-orange);
+  --color-danger: var(--color-red);
+}
+
+/* General Variables */
+:root {
+  --border-radius: 3px; /* Override basscss-border */
+  --transition-time: 0.1s;
+  --default-opacity: 0.5;
+  --default-space: 1rem;
+  --tint-percentage: 25%;
+  --shade-percentage: 25%;
+}
+
+/* Typography */
+:root {
+  --sans-serif-font-family: 'Helvetica Neue', Helvetica, 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Arial, sans-serif;
+  --mono-font-family: Monaco, Consolas, monospace;
+
+  --base-font-family: var(--sans-serif-font-family);
+  --base-font-size: 1rem;
+  --base-line-height: 1.5;
+  --base-font-weight: 400;
+
+  --font-size-xs: calc(var(--base-font-size) * 0.75);
+  --font-size-sm: calc(var(--base-font-size) * 0.875);
+  --font-size-md: var(--base-font-size);
+  --font-size-lg: calc(var(--base-font-size) * 1.25);
+  --font-size-xl: calc(var(--base-font-size) * 1.5);
+}
+
+/* Containers */
+:root {
+  --container-width-sm: 40rem;
+  --container-width-md: 52rem;
+  --container-width-lg: 64rem;
+}
