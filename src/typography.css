@@ -1,0 +1,210 @@
+/* Typography */
+
+/*---
+title: Base Style
+section: Typography
+---
+```example:html
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```
+*/
+
+body {
+  color: var(--color-black);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  line-height: var(--base-line-height);
+}
+
+
+/*---
+title: Link Text
+section: Typography
+---
+`<a>` Tag and `.link` class are available.
+```example:html
+<a href="#">Default Link</a>
+<hr class="my1" />
+<span class="link active">Acitve Link</span>
+<hr class="my1" />
+<span class="link disabled">Disabled Link</span>
+```
+*/
+
+a, .link {
+  cursor: pointer;
+  color: var(--color-primary);
+  text-decoration: underline;
+
+  &:hover, &:focus {
+    color: color(var(--color-primary) tint(var(--tint-percentage)));
+  }
+  &:active, &.active {
+    color: color(var(--color-primary) shade(var(--shade-percentage)));
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+
+    opacity: var(--default-opacity);
+    color: var(--color-primary);
+  }
+}
+
+
+/*---
+title: Font Sizing
+section: Typography
+---
+```example:html
+<p class="font-size-xs">Lorem ipsum dolor sit amet</p>
+<p class="font-size-sm">Lorem ipsum dolor sit amet</p>
+<p class="font-size-md">Lorem ipsum dolor sit amet</p>
+<p class="font-size-lg">Lorem ipsum dolor sit amet</p>
+<p class="font-size-xl">Lorem ipsum dolor sit amet</p>
+```
+*/
+
+.font-size-xs {
+  font-size: var(--font-size-xs);
+}
+.font-size-sm {
+  font-size: var(--font-size-sm);
+}
+.font-size-md {
+  font-size: var(--font-size-md);
+}
+.font-size-lg {
+  font-size: var(--font-size-lg);
+}
+.font-size-xl {
+  font-size: var(--font-size-xl);
+}
+
+
+/*---
+title: Font Coloring
+section: Typography
+---
+```example:html
+<p class="font-color-white">White</p>
+<p class="font-color-gray-lighter">Gray Lighter</p>
+<p class="font-color-gray-light">Gray Light</p>
+<p class="font-color-gray">Gray</p>
+<p class="font-color-gray-dark">Gray Dark</p>
+<p class="font-color-gray-darker">Gray Darker</p>
+<p class="font-color-black">Black</p>
+<p class="font-color-true-black">True Black</p>
+<p class="font-color-red">Red</p>
+<p class="font-color-orange">Orange</p>
+<p class="font-color-yellow">Yellow</p>
+<p class="font-color-olive">Olive</p>
+<p class="font-color-green">Green</p>
+<p class="font-color-teal">Teal</p>
+<p class="font-color-blue">Blue</p>
+<p class="font-color-violet">Violet</p>
+<p class="font-color-purple">Purple</p>
+<p class="font-color-pink">Pink</p>
+<p class="font-color-brown">Brown</p>
+<p class="font-color-primary">Primary = Blue (Default)</p>
+<p class="font-color-secondary">Secondary = Gray Dark (Default)</p>
+<p class="font-color-success">Success = Teal (Default)</p>
+<p class="font-color-info">Info = Violet (Default)</p>
+<p class="font-color-warning">Warning = Orange (Default)</p>
+<p class="font-color-danger">Danger = Red (Default)</p>
+```
+*/
+
+.font-color-white {
+  color: var(--color-white);
+}
+.font-color-gray-lighter {
+  color: var(--color-gray-lighter);
+}
+.font-color-gray-light {
+  color: var(--color-gray-light);
+}
+.font-color-gray {
+  color: var(--color-gray);
+}
+.font-color-gray-dark {
+  color: var(--color-gray-dark);
+}
+.font-color-gray-darker {
+  color: var(--color-gray-darker);
+}
+.font-color-black {
+  color: var(--color-black);
+}
+.font-color-true-black {
+  color: var(--color-true-black);
+}
+.font-color-red {
+  color: var(--color-red);
+}
+.font-color-orange {
+  color: var(--color-orange);
+}
+.font-color-yellow {
+  color: var(--color-yellow);
+}
+.font-color-olive {
+  color: var(--color-olive);
+}
+.font-color-green {
+  color: var(--color-green);
+}
+.font-color-teal {
+  color: var(--color-teal);
+}
+.font-color-blue {
+  color: var(--color-blue);
+}
+.font-color-violet {
+  color: var(--color-violet);
+}
+.font-color-purple {
+  color: var(--color-purple);
+}
+.font-color-pink {
+  color: var(--color-pink);
+}
+.font-color-brown {
+  color: var(--color-brown);
+}
+.font-color-primary {
+  color: var(--color-primary);
+}
+.font-color-secondary {
+  color: var(--color-secondary);
+}
+.font-color-success {
+  color: var(--color-success);
+}
+.font-color-info {
+  color: var(--color-info);
+}
+.font-color-warning {
+  color: var(--color-warning);
+}
+.font-color-danger {
+  color: var(--color-danger);
+}
+
+
+/*---
+title: Horizontal Rules
+section: Typography
+---
+`<hr />` default margin is none. If you want margin, use [basscss-margin](http://www.basscss.com/#basscss-margin).
+```example:html
+<p>Lorem ipsum dolor sit amet</p>
+<hr class="mt1 mb2" />
+<p>Lorem ipsum dolor sit amet</p>
+```
+*/
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--color-gray-light)
+}

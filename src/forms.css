@@ -1,0 +1,225 @@
+/* Forms */
+
+/*---
+title: Basic Forms
+section: Forms
+---
+```example:html
+<div class="form-group mb1">
+  <label class="form-group__label col-2">Text</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+<div class="form-group mb1">
+  <label class="form-group__label col-2">TextArea</label>
+  <textarea class="form-group__control" placeholder="TextA5rea"></textarea>
+</div>
+<div class="form-group">
+  <label class="form-group__label col-2">Selector</label>
+  <select class="form-group__control">
+    <option>Alice</option>
+    <option>Bob</option>
+    <option>Carol</option>
+  </select>
+</div>
+```
+*/
+
+.form-group {
+  & .form-group__label {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    font-size: var(--font-size-md);
+    padding-top: calc(var(--default-space) * 0.625 * 0.4);
+    padding-bottom: calc(var(--default-space) * 0.625 * 0.4);
+  }
+
+  & .form-group__control {
+    outline: none;
+    -webkit-appearance: none;
+
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    padding: calc(var(--default-space) * 0.625 * 0.3) calc(var(--default-space) * 0.5);
+    transition: border-color var(--transition-time);
+
+    background: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-gray);
+
+    &::placeholder {
+      color: var(--color-gray);
+    }
+
+    &:hover {
+      border-color: color(var(--color-gray) shade(var(--shade-percentage)));
+    }
+    &:focus, &.active {
+      border-color: var(--color-primary);
+    }
+    &:disabled, &.disabled {
+      background: var(--color-gray-light);
+      color: var(--color-gray);
+      border-color: var(--color-gray);
+    }
+  }
+}
+
+
+/*---
+title: Form State
+section: Forms
+---
+```example:html
+<div class="form-group mb1">
+  <label class="form-group__label col-2">.disabled</label>
+  <input type="text" class="form-group__control disabled" placeholder="Text" />
+</div>
+<div class="form-group">
+  <label class="form-group__label col-2">disabled=true</label>
+  <select class="form-group__control" disabled=true>
+    <option>Alice</option>
+    <option>Bob</option>
+    <option>Carol</option>
+  </select>
+</div>
+```
+*/
+
+
+/*---
+title: Form Sizing
+section: Forms
+---
+```example:html
+<div class="form-group form-group--xs mb1">
+  <label class="form-group__label col-3">Extra Small</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+<div class="form-group form-group--sm mb1">
+  <label class="form-group__label col-3">Small</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+<div class="form-group form-group--md mb1">
+  <label class="form-group__label col-3">Medium Small</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+<div class="form-group form-group--lg mb1">
+  <label class="form-group__label col-3">Large</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+<div class="form-group form-group--xl">
+  <label class="form-group__label col-3">Extra Large</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+```
+*/
+
+.form-group.form-group--xs {
+  & .form-group__label {
+    font-size: var(--font-size-xs);
+    padding-top: calc(var(--default-space) * 0.625 * 0.3);
+    padding-bottom: calc(var(--default-space) * 0.625 * 0.3);
+  }
+
+  & .form-group__control {
+    font-size: var(--font-size-xs);
+    padding: calc(var(--default-space) * 0.625 * 0.2) calc(var(--default-space) * 0.25);
+  }
+}
+
+.form-group.form-group--sm {
+  & .form-group__label {
+    font-size: var(--font-size-sm);
+    padding-top: calc(var(--default-space) * 0.625 * 0.35);
+    padding-bottom: calc(var(--default-space) * 0.625 * 0.35);
+  }
+
+  & .form-group__control {
+    font-size: var(--font-size-sm);
+    padding: calc(var(--default-space) * 0.625 * 0.25) calc(var(--default-space) * 0.375);
+  }
+}
+
+.form-group.form-group--md {
+  & .form-group__label {
+    font-size: var(--font-size-md);
+    padding-top: calc(var(--default-space) * 0.625 * 0.4);
+    padding-bottom: calc(var(--default-space) * 0.625 * 0.4);
+  }
+
+  & .form-group__control {
+    font-size: var(--font-size-md);
+    padding: calc(var(--default-space) * 0.625 * 0.3) calc(var(--default-space) * 0.5);
+  }
+}
+
+.form-group.form-group--lg {
+  & .form-group__label {
+    font-size: var(--font-size-lg);
+    padding-top: calc(var(--default-space) * 0.625 * 0.5);
+    padding-bottom: calc(var(--default-space) * 0.625 * 0.5);
+  }
+
+  & .form-group__control {
+    font-size: var(--font-size-lg);
+    padding: calc(var(--default-space) * 0.625 * 0.4) calc(var(--default-space) * 0.75);
+  }
+}
+
+.form-group.form-group--xl {
+  & .form-group__label {
+    font-size: var(--font-size-xl);
+    padding-top: calc(var(--default-space) * 0.625 * 0.6);
+    padding-bottom: calc(var(--default-space) * 0.625 * 0.6);
+  }
+
+  & .form-group__control {
+    font-size: var(--font-size-xl);
+    padding: calc(var(--default-space) * 0.625 * 0.5) calc(var(--default-space) * 1);
+  }
+}
+
+
+/*---
+title: Block Forms
+section: Forms
+---
+```example:html
+<div class="form-group form-group--block mb1">
+  <label class="form-group__label col-2">Text</label>
+  <input type="text" class="form-group__control" placeholder="Text" />
+</div>
+<div class="form-group form-group--block mb1">
+  <label class="form-group__label col-2">TextArea</label>
+  <textarea class="form-group__control" placeholder="TextArea"></textarea>
+</div>
+<div class="form-group form-group--block">
+  <label class="form-group__label col-2">Selector</label>
+  <select class="form-group__control">
+    <option>Alice</option>
+    <option>Bob</option>
+    <option>Carol</option>
+  </select>
+</div>
+```
+*/
+
+.form-group.form-group--block {
+  & .form-group__label {
+    display: block;
+    width: 100%;
+  }
+
+  & .form-group__control {
+    display: block;
+    width: 100%;
+  }
+}

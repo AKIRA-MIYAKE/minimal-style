@@ -1,0 +1,36 @@
+{
+  "name": "minimal-style",
+  "version": "0.0.0",
+  "description": "A minimal styling css framework",
+  "main": "index.js",
+  "scripts": {
+    "prod": "postcss src/minimal-style.css -o dist/minimal-style.min.css --config ./postcss.config.prod.js",
+    "build": "postcss src/minimal-style.css -o dist/minimal-style.css",
+    "watch": "postcss src/minimal-style.css -o dist/minimal-style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKIRA-MIYAKE/minimal-style.git"
+  },
+  "keywords": [],
+  "author": "AKIRA-MIYAKE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AKIRA-MIYAKE/minimal-style/issues"
+  },
+  "homepage": "https://github.com/AKIRA-MIYAKE/minimal-style#readme",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "mdcss": "^1.5.2",
+    "postcss": "^6.0.9",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^10.0.0",
+    "postcss-url": "^7.1.2"
+  },
+  "dependencies": {
+    "basscss": "^8.0.3",
+    "sanitize.css": "^5.0.0"
+  }
+}
