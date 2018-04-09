@@ -552,7 +552,7 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 
 /*---
 title: Low-Level CSS Toolkit
----s
+---
 minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, clarity, performance, and scalability.
 */
 
@@ -644,7 +644,6 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
   --line-height-2: 1.125;
   --line-height-3: 1.25;
   --line-height-4: 1.5;
-  --letter-spacing: 1;
   --caps-letter-spacing: .2em;
   --bold-font-weight: bold;
 }
@@ -783,19 +782,27 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
 
 .my4 { margin-top:    64px; margin-top:    4rem; margin-bottom: 64px; margin-bottom: 4rem }
 
-.mxn1 { margin-left: -8px; margin-left: -.5rem; margin-right: -8px; margin-right: -.5rem; }
+.mxn1 { margin-left: -var(--space-1); margin-right: -var(--space-1); }
 
-.mxn2 { margin-left: -16px; margin-left: -1rem; margin-right: -16px; margin-right: -1rem; }
+.mxn2 { margin-left: -var(--space-2); margin-right: -var(--space-2); }
 
-.mxn3 { margin-left: -32px; margin-left: -2rem; margin-right: -32px; margin-right: -2rem; }
+.mxn3 { margin-left: -var(--space-3); margin-right: -var(--space-3); }
 
-.mxn4 { margin-left: -64px; margin-left: -4rem; margin-right: -64px; margin-right: -4rem; }
+.mxn4 { margin-left: -var(--space-4); margin-right: -var(--space-4); }
 
-.ml-auto { margin-left: auto }
+.m-auto  { margin: auto; }
+
+.mt-auto { margin-top: auto }
 
 .mr-auto { margin-right: auto }
 
+.mb-auto { margin-bottom: auto }
+
+.ml-auto { margin-left: auto }
+
 .mx-auto { margin-left: auto; margin-right: auto; }
+
+.my-auto { margin-top: auto; margin-bottom: auto; }
 
 :root {
   --space-1: 8px;
@@ -953,7 +960,7 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
   width: 100%;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 576px) {
 
   .sm-col {
     float: left;
@@ -1017,7 +1024,7 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
 
 }
 
-@media (min-width: 52em) {
+@media (min-width: 768px) {
 
   .md-col {
     float: left;
@@ -1081,7 +1088,7 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
 
 }
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
 
   .lg-col {
     float: left;
@@ -1147,15 +1154,15 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
 
 .flex { display: -webkit-box; display: -ms-flexbox; display: flex }
 
-@media (min-width: 40em) {
+@media (min-width: 576px) {
   .sm-flex { display: -webkit-box; display: -ms-flexbox; display: flex }
 }
 
-@media (min-width: 52em) {
+@media (min-width: 768px) {
   .md-flex { display: -webkit-box; display: -ms-flexbox; display: flex }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
   .lg-flex { display: -webkit-box; display: -ms-flexbox; display: flex }
 }
 
@@ -1192,6 +1199,8 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
 .justify-between { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between }
 
 .justify-around  { -ms-flex-pack: distribute; justify-content: space-around }
+
+.justify-evenly  { -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly }
 
 .content-start   { -ms-flex-line-pack: start; align-content: flex-start }
 
@@ -1328,7 +1337,7 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
   .md-hide { display: none !important }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
   .lg-hide { display: none !important }
 }
 
@@ -1410,12 +1419,25 @@ minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, cla
 /* Containers */
 
 :root {
-  --container-width-sm: 640px;
-  --container-width-sm: 40rem;
-  --container-width-md: 832px;
-  --container-width-md: 52rem;
-  --container-width-lg: 1024px;
-  --container-width-lg: 64rem;
+  --container-width-sm: 540px;
+  --container-width-md: 720px;
+  --container-width-lg: 960px;
+  --container-width-xl: 1140px;
+}
+
+/** Shadow **/
+
+:root {
+  --dp1-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+  --dp2-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12);
+  --dp3-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);
+  --dp4-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, .2), 0px 4px 5px 0px rgba(0, 0, 0, .14), 0px 1px 10px 0px rgba(0, 0, 0, .12);
+  --dp6-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);
+  --dp8-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);
+  --dp9-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, .2), 0px 9px 12px 1px rgba(0, 0, 0, .14), 0px 3px 16px 2px rgba(0, 0, 0, .12);
+  --dp12-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, .2), 0px 12px 17px 2px rgba(0, 0, 0, .14), 0px 5px 22px 4px rgba(0, 0, 0, .12);
+  --dp16-box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, .2), 0px 16px 24px 2px rgba(0, 0, 0, .14), 0px 6px 30px 5px rgba(0, 0, 0, .12);
+  --dp24-box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, .2), 0px 24px 38px 3px rgba(0, 0, 0, .14), 0px 9px 46px 8px rgba(0, 0, 0, .12);
 }
 
 /* Typography */
@@ -1685,22 +1707,120 @@ Using break point that defined on [basscss-grid](https://github.com/basscss/bass
   margin-left: auto;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 576px) {
   .container {
-    width: 40rem;
+    width: 540px;
   }
 }
 
-@media (min-width: 52em) {
+@media (min-width: 768px) {
   .container {
-    width: 52rem;
+    width: 720px;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 992px) {
   .container {
-    width: 64rem;
+    width: 960px;
   }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* shadow */
+
+/*---
+title: Shadow
+---
+Shadow of expressing elevation in material design.
+```example:html
+<div class="flex">
+  <div class="p2">
+    <div class="p2 dp1-box-shadow">dp1</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp2-box-shadow">dp2</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp3-box-shadow">dp3</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp4-box-shadow">dp4</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp6-box-shadow">dp6</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp8-box-shadow">dp8</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp9-box-shadow">dp9</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp12-box-shadow">dp12</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp16-box-shadow">dp16</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp24-box-shadow">dp24</div>
+  </div>
+</div>
+```
+*/
+
+.dp1-box-shadow {
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+}
+
+.dp2-box-shadow {
+  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12);
+          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12);
+}
+
+.dp3-box-shadow {
+  -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);
+          box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);
+}
+
+.dp4-box-shadow {
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, .2), 0px 4px 5px 0px rgba(0, 0, 0, .14), 0px 1px 10px 0px rgba(0, 0, 0, .12);
+          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, .2), 0px 4px 5px 0px rgba(0, 0, 0, .14), 0px 1px 10px 0px rgba(0, 0, 0, .12);
+}
+
+.dp6-box-shadow {
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);
+          box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);
+}
+
+.dp8-box-shadow {
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);
+          box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);
+}
+
+.dp9-box-shadow {
+  -webkit-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, .2), 0px 9px 12px 1px rgba(0, 0, 0, .14), 0px 3px 16px 2px rgba(0, 0, 0, .12);
+          box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, .2), 0px 9px 12px 1px rgba(0, 0, 0, .14), 0px 3px 16px 2px rgba(0, 0, 0, .12);
+}
+
+.dp12-box-shadow {
+  -webkit-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, .2), 0px 12px 17px 2px rgba(0, 0, 0, .14), 0px 5px 22px 4px rgba(0, 0, 0, .12);
+          box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, .2), 0px 12px 17px 2px rgba(0, 0, 0, .14), 0px 5px 22px 4px rgba(0, 0, 0, .12);
+}
+
+.dp16-box-shadow {
+  -webkit-box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, .2), 0px 16px 24px 2px rgba(0, 0, 0, .14), 0px 6px 30px 5px rgba(0, 0, 0, .12);
+          box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, .2), 0px 16px 24px 2px rgba(0, 0, 0, .14), 0px 6px 30px 5px rgba(0, 0, 0, .12);
+}
+
+.dp24-box-shadow {
+  -webkit-box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, .2), 0px 24px 38px 3px rgba(0, 0, 0, .14), 0px 9px 46px 8px rgba(0, 0, 0, .12);
+          box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, .2), 0px 24px 38px 3px rgba(0, 0, 0, .14), 0px 9px 46px 8px rgba(0, 0, 0, .12);
 }
 
 /* Buttons */
@@ -2217,7 +2337,7 @@ section: Forms
 </div>
 <div class="form-group mb1">
   <label class="form-group__label col-2">TextArea</label>
-  <textarea class="form-group__control" placeholder="TextA5rea"></textarea>
+  <textarea class="form-group__control" placeholder="TextArea"></textarea>
 </div>
 <div class="form-group">
   <label class="form-group__label col-2">Selector</label>
@@ -2243,7 +2363,7 @@ section: Forms
 	padding-bottom: 0.25rem;
 }
 
-.form-group .form-group__control {
+.form-group input[type="text"].form-group__control, .form-group input[type="search"].form-group__control, .form-group input[type="tel"].form-group__control, .form-group input[type="url"].form-group__control, .form-group input[type="email"].form-group__control, .form-group input[type="password"].form-group__control, .form-group input[type="datetime"].form-group__control, .form-group input[type="date"].form-group__control, .form-group input[type="month"].form-group__control, .form-group input[type="week"].form-group__control, .form-group input[type="time"].form-group__control, .form-group input[type="datetime-local"].form-group__control, .form-group input[type="number"].form-group__control, .form-group textarea.form-group__control, .form-group select.form-group__control {
 	outline: none;
 	-webkit-appearance: none;
 	display: inline-block;
@@ -2264,27 +2384,31 @@ section: Forms
 	border-color: #ccc;
 }
 
-.form-group .form-group__control::-webkit-input-placeholder {
+.form-group input[type="text"].form-group__control::-webkit-input-placeholder, .form-group input[type="search"].form-group__control::-webkit-input-placeholder, .form-group input[type="tel"].form-group__control::-webkit-input-placeholder, .form-group input[type="url"].form-group__control::-webkit-input-placeholder, .form-group input[type="email"].form-group__control::-webkit-input-placeholder, .form-group input[type="password"].form-group__control::-webkit-input-placeholder, .form-group input[type="datetime"].form-group__control::-webkit-input-placeholder, .form-group input[type="date"].form-group__control::-webkit-input-placeholder, .form-group input[type="month"].form-group__control::-webkit-input-placeholder, .form-group input[type="week"].form-group__control::-webkit-input-placeholder, .form-group input[type="time"].form-group__control::-webkit-input-placeholder, .form-group input[type="datetime-local"].form-group__control::-webkit-input-placeholder, .form-group input[type="number"].form-group__control::-webkit-input-placeholder, .form-group textarea.form-group__control::-webkit-input-placeholder, .form-group select.form-group__control::-webkit-input-placeholder {
 	color: #ccc;
 }
 
-.form-group .form-group__control:-ms-input-placeholder {
+.form-group input[type="text"].form-group__control:-ms-input-placeholder, .form-group input[type="search"].form-group__control:-ms-input-placeholder, .form-group input[type="tel"].form-group__control:-ms-input-placeholder, .form-group input[type="url"].form-group__control:-ms-input-placeholder, .form-group input[type="email"].form-group__control:-ms-input-placeholder, .form-group input[type="password"].form-group__control:-ms-input-placeholder, .form-group input[type="datetime"].form-group__control:-ms-input-placeholder, .form-group input[type="date"].form-group__control:-ms-input-placeholder, .form-group input[type="month"].form-group__control:-ms-input-placeholder, .form-group input[type="week"].form-group__control:-ms-input-placeholder, .form-group input[type="time"].form-group__control:-ms-input-placeholder, .form-group input[type="datetime-local"].form-group__control:-ms-input-placeholder, .form-group input[type="number"].form-group__control:-ms-input-placeholder, .form-group textarea.form-group__control:-ms-input-placeholder, .form-group select.form-group__control:-ms-input-placeholder {
 	color: #ccc;
 }
 
-.form-group .form-group__control::placeholder {
+.form-group input[type="text"].form-group__control::-ms-input-placeholder, .form-group input[type="search"].form-group__control::-ms-input-placeholder, .form-group input[type="tel"].form-group__control::-ms-input-placeholder, .form-group input[type="url"].form-group__control::-ms-input-placeholder, .form-group input[type="email"].form-group__control::-ms-input-placeholder, .form-group input[type="password"].form-group__control::-ms-input-placeholder, .form-group input[type="datetime"].form-group__control::-ms-input-placeholder, .form-group input[type="date"].form-group__control::-ms-input-placeholder, .form-group input[type="month"].form-group__control::-ms-input-placeholder, .form-group input[type="week"].form-group__control::-ms-input-placeholder, .form-group input[type="time"].form-group__control::-ms-input-placeholder, .form-group input[type="datetime-local"].form-group__control::-ms-input-placeholder, .form-group input[type="number"].form-group__control::-ms-input-placeholder, .form-group textarea.form-group__control::-ms-input-placeholder, .form-group select.form-group__control::-ms-input-placeholder {
 	color: #ccc;
 }
 
-.form-group .form-group__control:hover {
+.form-group input[type="text"].form-group__control::placeholder, .form-group input[type="search"].form-group__control::placeholder, .form-group input[type="tel"].form-group__control::placeholder, .form-group input[type="url"].form-group__control::placeholder, .form-group input[type="email"].form-group__control::placeholder, .form-group input[type="password"].form-group__control::placeholder, .form-group input[type="datetime"].form-group__control::placeholder, .form-group input[type="date"].form-group__control::placeholder, .form-group input[type="month"].form-group__control::placeholder, .form-group input[type="week"].form-group__control::placeholder, .form-group input[type="time"].form-group__control::placeholder, .form-group input[type="datetime-local"].form-group__control::placeholder, .form-group input[type="number"].form-group__control::placeholder, .form-group textarea.form-group__control::placeholder, .form-group select.form-group__control::placeholder {
+	color: #ccc;
+}
+
+.form-group input[type="text"].form-group__control:hover, .form-group input[type="search"].form-group__control:hover, .form-group input[type="tel"].form-group__control:hover, .form-group input[type="url"].form-group__control:hover, .form-group input[type="email"].form-group__control:hover, .form-group input[type="password"].form-group__control:hover, .form-group input[type="datetime"].form-group__control:hover, .form-group input[type="date"].form-group__control:hover, .form-group input[type="month"].form-group__control:hover, .form-group input[type="week"].form-group__control:hover, .form-group input[type="time"].form-group__control:hover, .form-group input[type="datetime-local"].form-group__control:hover, .form-group input[type="number"].form-group__control:hover, .form-group textarea.form-group__control:hover, .form-group select.form-group__control:hover {
 	border-color: rgb(153, 153, 153);
 }
 
-.form-group .form-group__control:focus, .form-group .form-group__control.active {
+.form-group input[type="text"].form-group__control:focus, .form-group input[type="text"].form-group__control.active, .form-group input[type="search"].form-group__control:focus, .form-group input[type="search"].form-group__control.active, .form-group input[type="tel"].form-group__control:focus, .form-group input[type="tel"].form-group__control.active, .form-group input[type="url"].form-group__control:focus, .form-group input[type="url"].form-group__control.active, .form-group input[type="email"].form-group__control:focus, .form-group input[type="email"].form-group__control.active, .form-group input[type="password"].form-group__control:focus, .form-group input[type="password"].form-group__control.active, .form-group input[type="datetime"].form-group__control:focus, .form-group input[type="datetime"].form-group__control.active, .form-group input[type="date"].form-group__control:focus, .form-group input[type="date"].form-group__control.active, .form-group input[type="month"].form-group__control:focus, .form-group input[type="month"].form-group__control.active, .form-group input[type="week"].form-group__control:focus, .form-group input[type="week"].form-group__control.active, .form-group input[type="time"].form-group__control:focus, .form-group input[type="time"].form-group__control.active, .form-group input[type="datetime-local"].form-group__control:focus, .form-group input[type="datetime-local"].form-group__control.active, .form-group input[type="number"].form-group__control:focus, .form-group input[type="number"].form-group__control.active, .form-group textarea.form-group__control:focus, .form-group textarea.form-group__control.active, .form-group select.form-group__control:focus, .form-group select.form-group__control.active {
 	border-color: #2185d0;
 }
 
-.form-group .form-group__control:disabled, .form-group .form-group__control.disabled {
+.form-group input[type="text"].form-group__control:disabled, .form-group input[type="text"].form-group__control.disabled, .form-group input[type="search"].form-group__control:disabled, .form-group input[type="search"].form-group__control.disabled, .form-group input[type="tel"].form-group__control:disabled, .form-group input[type="tel"].form-group__control.disabled, .form-group input[type="url"].form-group__control:disabled, .form-group input[type="url"].form-group__control.disabled, .form-group input[type="email"].form-group__control:disabled, .form-group input[type="email"].form-group__control.disabled, .form-group input[type="password"].form-group__control:disabled, .form-group input[type="password"].form-group__control.disabled, .form-group input[type="datetime"].form-group__control:disabled, .form-group input[type="datetime"].form-group__control.disabled, .form-group input[type="date"].form-group__control:disabled, .form-group input[type="date"].form-group__control.disabled, .form-group input[type="month"].form-group__control:disabled, .form-group input[type="month"].form-group__control.disabled, .form-group input[type="week"].form-group__control:disabled, .form-group input[type="week"].form-group__control.disabled, .form-group input[type="time"].form-group__control:disabled, .form-group input[type="time"].form-group__control.disabled, .form-group input[type="datetime-local"].form-group__control:disabled, .form-group input[type="datetime-local"].form-group__control.disabled, .form-group input[type="number"].form-group__control:disabled, .form-group input[type="number"].form-group__control.disabled, .form-group textarea.form-group__control:disabled, .form-group textarea.form-group__control.disabled, .form-group select.form-group__control:disabled, .form-group select.form-group__control.disabled {
 	background: #ececec;
 	color: #ccc;
 	border-color: #ccc;
@@ -2347,7 +2471,7 @@ section: Forms
 	padding-bottom: 0.1875rem;
 }
 
-.form-group.form-group--xs .form-group__control {
+.form-group.form-group--xs input[type="text"].form-group__control, .form-group.form-group--xs input[type="search"].form-group__control, .form-group.form-group--xs input[type="tel"].form-group__control, .form-group.form-group--xs input[type="url"].form-group__control, .form-group.form-group--xs input[type="email"].form-group__control, .form-group.form-group--xs input[type="password"].form-group__control, .form-group.form-group--xs input[type="datetime"].form-group__control, .form-group.form-group--xs input[type="date"].form-group__control, .form-group.form-group--xs input[type="month"].form-group__control, .form-group.form-group--xs input[type="week"].form-group__control, .form-group.form-group--xs input[type="time"].form-group__control, .form-group.form-group--xs input[type="datetime-local"].form-group__control, .form-group.form-group--xs input[type="number"].form-group__control, .form-group.form-group--xs textarea.form-group__control, .form-group.form-group--xs select.form-group__control {
 	font-size: 12px;
 	font-size: 0.75rem;
 	padding: 2px 4px;
@@ -2363,7 +2487,7 @@ section: Forms
 	padding-bottom: 0.21875rem;
 }
 
-.form-group.form-group--sm .form-group__control {
+.form-group.form-group--sm input[type="text"].form-group__control, .form-group.form-group--sm input[type="search"].form-group__control, .form-group.form-group--sm input[type="tel"].form-group__control, .form-group.form-group--sm input[type="url"].form-group__control, .form-group.form-group--sm input[type="email"].form-group__control, .form-group.form-group--sm input[type="password"].form-group__control, .form-group.form-group--sm input[type="datetime"].form-group__control, .form-group.form-group--sm input[type="date"].form-group__control, .form-group.form-group--sm input[type="month"].form-group__control, .form-group.form-group--sm input[type="week"].form-group__control, .form-group.form-group--sm input[type="time"].form-group__control, .form-group.form-group--sm input[type="datetime-local"].form-group__control, .form-group.form-group--sm input[type="number"].form-group__control, .form-group.form-group--sm textarea.form-group__control, .form-group.form-group--sm select.form-group__control {
 	font-size: 14px;
 	font-size: 0.875rem;
 	padding: 2.5px 6px;
@@ -2379,7 +2503,7 @@ section: Forms
 	padding-bottom: 0.25rem;
 }
 
-.form-group.form-group--md .form-group__control {
+.form-group.form-group--md input[type="text"].form-group__control, .form-group.form-group--md input[type="search"].form-group__control, .form-group.form-group--md input[type="tel"].form-group__control, .form-group.form-group--md input[type="url"].form-group__control, .form-group.form-group--md input[type="email"].form-group__control, .form-group.form-group--md input[type="password"].form-group__control, .form-group.form-group--md input[type="datetime"].form-group__control, .form-group.form-group--md input[type="date"].form-group__control, .form-group.form-group--md input[type="month"].form-group__control, .form-group.form-group--md input[type="week"].form-group__control, .form-group.form-group--md input[type="time"].form-group__control, .form-group.form-group--md input[type="datetime-local"].form-group__control, .form-group.form-group--md input[type="number"].form-group__control, .form-group.form-group--md textarea.form-group__control, .form-group.form-group--md select.form-group__control {
 	font-size: 16px;
 	font-size: 1rem;
 	padding: 3px 8px;
@@ -2395,7 +2519,7 @@ section: Forms
 	padding-bottom: 0.3125rem;
 }
 
-.form-group.form-group--lg .form-group__control {
+.form-group.form-group--lg input[type="text"].form-group__control, .form-group.form-group--lg input[type="search"].form-group__control, .form-group.form-group--lg input[type="tel"].form-group__control, .form-group.form-group--lg input[type="url"].form-group__control, .form-group.form-group--lg input[type="email"].form-group__control, .form-group.form-group--lg input[type="password"].form-group__control, .form-group.form-group--lg input[type="datetime"].form-group__control, .form-group.form-group--lg input[type="date"].form-group__control, .form-group.form-group--lg input[type="month"].form-group__control, .form-group.form-group--lg input[type="week"].form-group__control, .form-group.form-group--lg input[type="time"].form-group__control, .form-group.form-group--lg input[type="datetime-local"].form-group__control, .form-group.form-group--lg input[type="number"].form-group__control, .form-group.form-group--lg textarea.form-group__control, .form-group.form-group--lg select.form-group__control {
 	font-size: 20px;
 	font-size: 1.25rem;
 	padding: 4px 12px;
@@ -2411,7 +2535,7 @@ section: Forms
 	padding-bottom: 0.375rem;
 }
 
-.form-group.form-group--xl .form-group__control {
+.form-group.form-group--xl input[type="text"].form-group__control, .form-group.form-group--xl input[type="search"].form-group__control, .form-group.form-group--xl input[type="tel"].form-group__control, .form-group.form-group--xl input[type="url"].form-group__control, .form-group.form-group--xl input[type="email"].form-group__control, .form-group.form-group--xl input[type="password"].form-group__control, .form-group.form-group--xl input[type="datetime"].form-group__control, .form-group.form-group--xl input[type="date"].form-group__control, .form-group.form-group--xl input[type="month"].form-group__control, .form-group.form-group--xl input[type="week"].form-group__control, .form-group.form-group--xl input[type="time"].form-group__control, .form-group.form-group--xl input[type="datetime-local"].form-group__control, .form-group.form-group--xl input[type="number"].form-group__control, .form-group.form-group--xl textarea.form-group__control, .form-group.form-group--xl select.form-group__control {
 	font-size: 24px;
 	font-size: 1.5rem;
 	padding: 5px 16px;
@@ -2452,16 +2576,18 @@ section: Forms
 	width: 100%;
 }
 
-@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-sm (min-width: 576px);
 
-@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-md (min-width: 768px);
 
-@custom-media --breakpoint-lg (min-width: 64em);
+@custom-media --breakpoint-lg (min-width: 992px);
 
 @custom-media --breakpoint-xs (max-width: 40em);
 
 @custom-media --breakpoint-sm-md (min-width: 40em) and (max-width: 52em);
 
 @custom-media --breakpoint-md-lg (min-width: 52em) and (max-width: 64em);
+
+@custom-media --breakpoint-xl (min-width: 1200px);
 
 /*# sourceMappingURL=minimal-style.css.map */

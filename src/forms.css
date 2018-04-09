@@ -11,7 +11,7 @@ section: Forms
 </div>
 <div class="form-group mb1">
   <label class="form-group__label col-2">TextArea</label>
-  <textarea class="form-group__control" placeholder="TextA5rea"></textarea>
+  <textarea class="form-group__control" placeholder="TextArea"></textarea>
 </div>
 <div class="form-group">
   <label class="form-group__label col-2">Selector</label>
@@ -35,7 +35,21 @@ section: Forms
     padding-bottom: calc(var(--default-space) * 0.625 * 0.4);
   }
 
-  & .form-group__control {
+  & input[type="text"].form-group__control,
+  & input[type="search"].form-group__control,
+  & input[type="tel"].form-group__control,
+  & input[type="url"].form-group__control,
+  & input[type="email"].form-group__control,
+  & input[type="password"].form-group__control,
+  & input[type="datetime"].form-group__control,
+  & input[type="date"].form-group__control,
+  & input[type="month"].form-group__control,
+  & input[type="week"].form-group__control,
+  & input[type="time"].form-group__control,
+  & input[type="datetime-local"].form-group__control,
+  & input[type="number"].form-group__control,
+  & textarea.form-group__control,
+  & select.form-group__control {
     outline: none;
     -webkit-appearance: none;
 
@@ -129,7 +143,21 @@ section: Forms
     padding-bottom: calc(var(--default-space) * 0.625 * 0.3);
   }
 
-  & .form-group__control {
+  & input[type="text"].form-group__control,
+  & input[type="search"].form-group__control,
+  & input[type="tel"].form-group__control,
+  & input[type="url"].form-group__control,
+  & input[type="email"].form-group__control,
+  & input[type="password"].form-group__control,
+  & input[type="datetime"].form-group__control,
+  & input[type="date"].form-group__control,
+  & input[type="month"].form-group__control,
+  & input[type="week"].form-group__control,
+  & input[type="time"].form-group__control,
+  & input[type="datetime-local"].form-group__control,
+  & input[type="number"].form-group__control,
+  & textarea.form-group__control,
+  & select.form-group__control {
     font-size: var(--font-size-xs);
     padding: calc(var(--default-space) * 0.625 * 0.2) calc(var(--default-space) * 0.25);
   }
@@ -142,7 +170,21 @@ section: Forms
     padding-bottom: calc(var(--default-space) * 0.625 * 0.35);
   }
 
-  & .form-group__control {
+  & input[type="text"].form-group__control,
+  & input[type="search"].form-group__control,
+  & input[type="tel"].form-group__control,
+  & input[type="url"].form-group__control,
+  & input[type="email"].form-group__control,
+  & input[type="password"].form-group__control,
+  & input[type="datetime"].form-group__control,
+  & input[type="date"].form-group__control,
+  & input[type="month"].form-group__control,
+  & input[type="week"].form-group__control,
+  & input[type="time"].form-group__control,
+  & input[type="datetime-local"].form-group__control,
+  & input[type="number"].form-group__control,
+  & textarea.form-group__control,
+  & select.form-group__control {
     font-size: var(--font-size-sm);
     padding: calc(var(--default-space) * 0.625 * 0.25) calc(var(--default-space) * 0.375);
   }
@@ -155,7 +197,21 @@ section: Forms
     padding-bottom: calc(var(--default-space) * 0.625 * 0.4);
   }
 
-  & .form-group__control {
+  & input[type="text"].form-group__control,
+  & input[type="search"].form-group__control,
+  & input[type="tel"].form-group__control,
+  & input[type="url"].form-group__control,
+  & input[type="email"].form-group__control,
+  & input[type="password"].form-group__control,
+  & input[type="datetime"].form-group__control,
+  & input[type="date"].form-group__control,
+  & input[type="month"].form-group__control,
+  & input[type="week"].form-group__control,
+  & input[type="time"].form-group__control,
+  & input[type="datetime-local"].form-group__control,
+  & input[type="number"].form-group__control,
+  & textarea.form-group__control,
+  & select.form-group__control {
     font-size: var(--font-size-md);
     padding: calc(var(--default-space) * 0.625 * 0.3) calc(var(--default-space) * 0.5);
   }
@@ -168,7 +224,21 @@ section: Forms
     padding-bottom: calc(var(--default-space) * 0.625 * 0.5);
   }
 
-  & .form-group__control {
+  & input[type="text"].form-group__control,
+  & input[type="search"].form-group__control,
+  & input[type="tel"].form-group__control,
+  & input[type="url"].form-group__control,
+  & input[type="email"].form-group__control,
+  & input[type="password"].form-group__control,
+  & input[type="datetime"].form-group__control,
+  & input[type="date"].form-group__control,
+  & input[type="month"].form-group__control,
+  & input[type="week"].form-group__control,
+  & input[type="time"].form-group__control,
+  & input[type="datetime-local"].form-group__control,
+  & input[type="number"].form-group__control,
+  & textarea.form-group__control,
+  & select.form-group__control {
     font-size: var(--font-size-lg);
     padding: calc(var(--default-space) * 0.625 * 0.4) calc(var(--default-space) * 0.75);
   }
@@ -181,7 +251,21 @@ section: Forms
     padding-bottom: calc(var(--default-space) * 0.625 * 0.6);
   }
 
-  & .form-group__control {
+  & input[type="text"].form-group__control,
+  & input[type="search"].form-group__control,
+  & input[type="tel"].form-group__control,
+  & input[type="url"].form-group__control,
+  & input[type="email"].form-group__control,
+  & input[type="password"].form-group__control,
+  & input[type="datetime"].form-group__control,
+  & input[type="date"].form-group__control,
+  & input[type="month"].form-group__control,
+  & input[type="week"].form-group__control,
+  & input[type="time"].form-group__control,
+  & input[type="datetime-local"].form-group__control,
+  & input[type="number"].form-group__control,
+  & textarea.form-group__control,
+  & select.form-group__control {
     font-size: var(--font-size-xl);
     padding: calc(var(--default-space) * 0.625 * 0.5) calc(var(--default-space) * 1);
   }

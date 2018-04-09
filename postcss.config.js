@@ -15,9 +15,11 @@ module.exports = {
       }
     }),
     require('mdcss')({
-      examples: {
-        css: ["../dist/minimal-style.css"]
-      }
+      theme: require('mdcss-theme-github')({
+        examples: {
+          css: ['../dist/minimal-style.css']
+        }
+      })
     })
   ]
 }

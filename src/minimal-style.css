@@ -6,18 +6,19 @@ title: Render elements consistently
 minimal-style uses [sanitize.css](http://10up.github.io/sanitize.css/) to make browsers render elements consistently.
 */
 
-@import "../node_modules/sanitize.css/sanitize";
+@import "sanitize.css/sanitize";
 
 /*---
 title: Low-Level CSS Toolkit
----s
+---
 minimal-style includes [Basscss](http://www.basscss.com/) in order to speed, clarity, performance, and scalability.
 */
 
-@import "../node_modules/basscss/src/basscss";
+@import "basscss/src/basscss";
 
 @import "variables";
 @import "typography";
 @import "container";
+@import "shadow";
 @import "buttons";
 @import "forms";

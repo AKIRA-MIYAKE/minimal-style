@@ -1,0 +1,81 @@
+/* shadow */
+
+/*---
+title: Shadow
+---
+Shadow of expressing elevation in material design.
+```example:html
+<div class="flex">
+  <div class="p2">
+    <div class="p2 dp1-box-shadow">dp1</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp2-box-shadow">dp2</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp3-box-shadow">dp3</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp4-box-shadow">dp4</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp6-box-shadow">dp6</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp8-box-shadow">dp8</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp9-box-shadow">dp9</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp12-box-shadow">dp12</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp16-box-shadow">dp16</div>
+  </div>
+  <div class="p2">
+    <div class="p2 dp24-box-shadow">dp24</div>
+  </div>
+</div>
+```
+*/
+
+.dp1-box-shadow {
+  box-shadow: var(--dp1-box-shadow);
+}
+
+.dp2-box-shadow {
+  box-shadow: var(--dp2-box-shadow);
+}
+
+.dp3-box-shadow {
+  box-shadow: var(--dp3-box-shadow);
+}
+
+.dp4-box-shadow {
+  box-shadow: var(--dp4-box-shadow);
+}
+
+.dp6-box-shadow {
+  box-shadow: var(--dp6-box-shadow);
+}
+
+.dp8-box-shadow {
+  box-shadow: var(--dp8-box-shadow);
+}
+
+.dp9-box-shadow {
+  box-shadow: var(--dp9-box-shadow);
+}
+
+.dp12-box-shadow {
+  box-shadow: var(--dp12-box-shadow);
+}
+
+.dp16-box-shadow {
+  box-shadow: var(--dp16-box-shadow);
+}
+
+.dp24-box-shadow {
+  box-shadow: var(--dp24-box-shadow);
+}

@@ -1,6 +1,6 @@
 {
   "name": "minimal-style",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A minimal styling css framework",
   "main": "index.js",
   "scripts": {
@@ -22,15 +22,15 @@
   "devDependencies": {
     "cssnano": "^3.10.0",
     "mdcss": "^1.5.2",
-    "postcss": "^6.0.9",
-    "postcss-cli": "^4.1.0",
-    "postcss-cssnext": "^3.0.2",
+    "postcss": "^6.0.21",
+    "postcss-cli": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
     "postcss-extend": "^1.0.5",
-    "postcss-import": "^10.0.0",
-    "postcss-url": "^7.1.2"
+    "postcss-import": "^11.1.0",
+    "postcss-url": "^7.3.2"
   },
   "dependencies": {
-    "basscss": "^8.0.3",
+    "basscss": "^8.0.4",
     "sanitize.css": "^5.0.0"
   }
 }
