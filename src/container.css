@@ -41,7 +41,7 @@ Using break point that defined on [basscss-grid](https://github.com/basscss/bass
   }
 }
 
-@media (--breakpoint-lg) {
+@media (--breakpoint-xl) {
   .container {
     width: var(--container-width-xl);
   }

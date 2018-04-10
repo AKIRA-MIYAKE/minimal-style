@@ -1725,7 +1725,7 @@ Using break point that defined on [basscss-grid](https://github.com/basscss/bass
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .container {
     width: 1140px;
   }
